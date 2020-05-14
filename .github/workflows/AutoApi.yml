@@ -10,7 +10,7 @@ on:
   #  branches: 
   #    - master
   schedule:
-    - cron: 0 */6 * * *
+    - cron:   0/1 9,10,18,19 * * THU
   watch:
     types: [started]
    
@@ -25,22 +25,10 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.8
-    - name: Install requests #安装requests
+    - name: Install requests urllib re json base64 smtplib #安装requests等
       run: |
-        pip install requests
+        pip install requests  urllib re json base64 smtplib
     - name: Test Api #Api调用
       run: |
-        echo `date +"%Y-%m-%d %H:%M:%S"` begin > time.log
-        python 1.py
+        python index.py
         
-           
-    - name: commit #上传新的refresh_token
-      run: |
-        git config --global user.email AutoupdateRobot@email.com
-        git config --global user.name AutoupdateRobot
-        git add .
-        git commit -m "update new refresh_token" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
