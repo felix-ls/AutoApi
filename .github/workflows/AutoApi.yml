@@ -26,9 +26,9 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.8
-    - name: Install requests urllib re json base64 smtplib #安装requests等
+    - name: Install requests re json base64 smtplib #安装requests等
       run: |
-        pip install requests  urllib re json base64 smtplib
+        pip install requests
     - name: Test Api #Api调用
       run: |
         python index.py
