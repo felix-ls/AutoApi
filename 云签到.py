@@ -163,6 +163,7 @@ while cs<120 and tj=="没有签到任务":
 						if sign_res.text=="success":
 							print(task_['classname'],task_['sign_type'],"完成签到")
 							sendmail(task_['classname'],user_info['email'],task_['sign_type'])
+							tj = "完成签到"
 
 
 		def get_activeid(self,courseid,classid, classname):
@@ -188,7 +189,7 @@ while cs<120 and tj=="没有签到任务":
 
 				return return_data
 			else:
-				print(classname,"no sign-in task")
+				print(classname,tj)
 
 
 		#Upload picture for sign-in and get the picture id——objectid
