@@ -9,8 +9,8 @@ on:
     branches: 
       - master
   schedule:
-    - cron:   20/1 1,10 * * *
-    - cron:   1-20/1 2,11 * * *
+    - cron:   20 1,10 * * *
+
   watch:
     types: [started]
    
