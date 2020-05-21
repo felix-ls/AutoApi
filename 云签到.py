@@ -43,7 +43,8 @@ UploadPic_API = "http://pan-yz.chaoxing.com/upload?_token=410f360978c4d7ee139803
 
 
 cs = 0
-while cs < 120 :
+active = True
+while cs < 120 and active:
 	cs += 1
 	print("第%s次检测"%cs)
 	def sendmail(classname, mail, signtype):
@@ -162,6 +163,7 @@ while cs < 120 :
 						if sign_res.text=="success":
 							print(task_['classname'],task_['sign_type'],"完成签到")
 							sendmail(task_['classname'],user_info['email'],task_['sign_type'])
+							active = False
                                                         
 
 
