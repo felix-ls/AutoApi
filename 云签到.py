@@ -43,8 +43,7 @@ UploadPic_API = "http://pan-yz.chaoxing.com/upload?_token=410f360978c4d7ee139803
 
 
 cs = 0
-tj = "没有签到任务"
-while cs<120 and tj=="没有签到任务":
+while cs < 120 :
 	cs += 1
 	print("第%s次检测"%cs)
 	def sendmail(classname, mail, signtype):
@@ -163,8 +162,7 @@ while cs<120 and tj=="没有签到任务":
 						if sign_res.text=="success":
 							print(task_['classname'],task_['sign_type'],"完成签到")
 							sendmail(task_['classname'],user_info['email'],task_['sign_type'])
-							tj = "完成签到"
-                                                        break
+                                                        
 
 
 		def get_activeid(self,courseid,classid, classname):
@@ -189,9 +187,8 @@ while cs<120 and tj=="没有签到任务":
 					})
 
 				return return_data
-				break
 			else:
-				print(classname,tj)
+				print(classname,"没有签到任务")
 
 
 		#Upload picture for sign-in and get the picture id——objectid
