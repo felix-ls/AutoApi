@@ -28,7 +28,7 @@ jobs:
     - name: Install requests #安装requests
       run: |
         pip install requests
-    - name: 云签到
+    - name: 陶畅云签到
       run: |
         python 云签到tc.py
         
