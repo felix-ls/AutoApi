@@ -25,7 +25,7 @@ user_info={
 '''==========第三方SMTP服务(勿修改)========='''
 mail_host = "smtp.qq.com"
 mail_user = "453797581@qq.com"  #此处为发件邮箱，用来发送签到完毕的信息
-mail_pass = "pokiuwauaaykbica"   #此处为发件邮箱的密钥，请勿更改
+mail_pass = "psuwcppvubgxbgfb"   #此处为发件邮箱的密钥，请勿更改
 sender = '453797581@qq.com' #此处为发件邮箱
 '''================End==================='''
 #login
