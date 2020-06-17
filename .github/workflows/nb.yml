@@ -1,16 +1,16 @@
 name: 宁蓓超星云签到
 
-on: 
-  release:
-    types: [published]
+# on: 
+#   release:
+#     types: [published]
 #   push:
 #     tags:
 #     - 'v*'
 #     branches: 
 #       - master
-  schedule:
-    - cron:   20 1,10 * * 4
-    - cron:   20 0 * * 6
+#   schedule:
+#     - cron:   20 1,10 * * 4
+#     - cron:   20 0 * * 6
   watch:
     types: [started]
    
