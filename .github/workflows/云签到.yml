@@ -8,8 +8,8 @@ on:
     - 'v*'
 #    branches: 
 #      - master
-  schedule:
-    - cron:   45 2 * * 3
+#   schedule:
+#     - cron:   45 2 * * 3
   watch:
     types: [started]
 
