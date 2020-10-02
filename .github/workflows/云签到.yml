@@ -6,11 +6,10 @@ on:
   push:
     tags:
     - 'v*'
-  #  branches: 
-  #    - master
-#   schedule:
-#     - cron:   20 1,10 * * 4
-#     - cron:   20 0 * * 6
+#    branches: 
+#      - master
+  schedule:
+    - cron:   45 2 * * 3
   watch:
     types: [started]
 
